@@ -7,14 +7,14 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS build
 WORKDIR /src
-COPY ["Userservice/Zhaoxi.MSACommerce.UserMicroservice.csproj", "Userservice/"]
+COPY ["Zhaoxi.MSACommerce.UserMicroservice.csproj", "Userservice/"]
 #COPY ["Zhaoxi.MSACommerce.Service/Zhaoxi.MSACommerce.Service.csproj", "Zhaoxi.MSACommerce.Service/"]
 #COPY ["Zhaoxi.MSACommerce.Model/Zhaoxi.MSACommerce.Model.csproj", "Zhaoxi.MSACommerce.Model/"]
 #COPY ["Zhaoxi.AgileFramework.Core/Zhaoxi.AgileFramework.Core.csproj", "Zhaoxi.AgileFramework.Core/"]
 #COPY ["Zhaoxi.AgileFramework.Common/Zhaoxi.AgileFramework.Common.csproj", "Zhaoxi.AgileFramework.Common/"]
 #COPY ["Zhaoxi.MSACommerce.Interface/Zhaoxi.MSACommerce.Interface.csproj", "Zhaoxi.MSACommerce.Interface/"]
 #COPY ["Zhaoxi.AgileFramework.WebCore/Zhaoxi.AgileFramework.WebCore.csproj", "Zhaoxi.AgileFramework.WebCore/"]
-RUN dotnet restore "Userservice/Zhaoxi.MSACommerce.UserMicroservice.csproj"
+RUN dotnet restore "Zhaoxi.MSACommerce.UserMicroservice.csproj"
 COPY . .
 WORKDIR "/src/Userservice"
 RUN dotnet build "Zhaoxi.MSACommerce.UserMicroservice.csproj" -c Release -o /app/build
