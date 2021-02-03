@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>e1c222f2-3af3-45b1-8ea4-714870966bba</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.2" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Zhaoxi.AgileFramework.WebCore\Zhaoxi.AgileFramework.WebCore.csproj" />
+    <ProjectReference Include="..\Zhaoxi.MSACommerce.Interface\Zhaoxi.MSACommerce.Interface.csproj" />
+    <ProjectReference Include="..\Zhaoxi.MSACommerce.Model\Zhaoxi.MSACommerce.Model.csproj" />
+    <ProjectReference Include="..\Zhaoxi.MSACommerce.Service\Zhaoxi.MSACommerce.Service.csproj" />
+  </ItemGroup>
+
+</Project>
